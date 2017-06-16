@@ -1,0 +1,17 @@
+  <form name="checkform" action="http://community.languagetool.org" method="post">
+
+    <p id="checktextpara">
+      <textarea id="checktext" name="text" style="width: 100%" rows="6">Paste your own text here... or check check this text.</textarea>
+    </p>
+
+    <div>
+      <select name="lang" id="lang">
+          <option value="en-US">English</option>
+          <option value="de-DE">German</option>
+          <option value="it">Italian</option>
+      </select>
+      <input type="submit" name="_action_checkText" value="Check Text" onClick="doit();return false;">
+      <div id="feedbackErrorMessage" style="color: red;"></div>
+    </div>
+
+  </form>

@@ -1,10 +1,11 @@
 'use strict';
 
-angular.module('myApp.grammarCheck', ['ngRoute'])
+angular.module('grammarCheck', ['ui.router'])
 
-.config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/grammar-check', {
-    templateUrl: 'grammar-check/grammar-check.html',
+.config(['$stateProvider', function($stateProvider) {
+  $stateProvider.state('/grammar-check', {
+    url: '/grammar-check',
+    templateUrl: '/grammar-check/grammar-check.html',
     controller: 'GrammarCheckCtrl'
   });
 }])

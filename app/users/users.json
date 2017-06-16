@@ -1,0 +1,37 @@
+[
+    {
+        "name": "Rick Sanchez", 
+        "errors": {
+            "spelling": {
+                "words": [],
+                "count": ""
+            }, 
+            "wordChoice": {
+                "count": ""
+            },
+            "verbTense": {
+                "count": ""
+            }, 
+            "verbForm": {
+                "count": ""
+            },
+            "subjectVerb": {
+                "count": ""
+            },
+            "fusedSentence": {
+                "count": ""
+            }, 
+            "commaSplice": {
+                "count": ""
+            }, 
+            "punctuation": {
+                "count": ""
+            }, 
+            "fragment": {
+                "count": ""
+            }
+        }
+
+
+    },
+]

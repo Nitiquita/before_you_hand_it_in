@@ -1,5 +1,9 @@
 /* app css stylesheet */
 
+button {
+  margin-right: 20px;
+}
+
 .menu {
   list-style: none;
   border-bottom: 0.1em solid black;
@@ -22,4 +26,47 @@
 .menu > li + li:before {
   content: "|";
   padding-right: 0.3em;
+}
+
+.navbar {
+  padding-top: 0px;
+  padding-left: 0px;
+  margin-top: 0px;
+  margin-left: 0px;  
+  list-style: none;
+  display: inline-flex
+}
+
+.links {
+  margin-right: 25px;
+  font-size: 24px;
+}
+
+.log {
+  margin-top: 20px;
+}
+
+.count {
+  margin-left: 20px;
+}
+
+#tool {
+  width: 100%;
+  height: 100%
+}
+
+#title {
+  font-size: 60px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+#errors {
+  padding-left: 0px;
+  list-style: none;
+  font-size: 18px
+}
+
+#spelling {
+  margin-left: 20px;
 }

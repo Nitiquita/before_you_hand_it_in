@@ -1,7 +1,30 @@
 /* app css stylesheet */
+img {
+  width: 675px;
+  height: 300px;
+  padding: 1px;
+  border: 5px solid #36B1BF;
+  background-color: #36B1BF;
+}
+ul {
+  list-style: none
+}
+
+canvas {
+  height: 200px;
+  width: 200px
+}
+header {
+  background-color: #36B1BF;
+}
+
+footer {
+  background-color: #7fa6ef;
+}
 
 button {
   margin-right: 20px;
+  background-color: #F2385A
 }
 
 .menu {
@@ -29,17 +52,18 @@ button {
 }
 
 .navbar {
+  list-style: none;
+  display: inline-flex;
   padding-top: 0px;
   padding-left: 0px;
   margin-top: 0px;
-  margin-left: 0px;  
-  list-style: none;
-  display: inline-flex
+  margin-left: 40px;  
 }
 
 .links {
   margin-right: 25px;
   font-size: 24px;
+  color: #4AD9D9
 }
 
 .log {
@@ -50,14 +74,29 @@ button {
   margin-left: 20px;
 }
 
+.page-wrap {
+  background-color: #E9F1DF
+}
+
+.rlink {
+  font-size: 24px;
+  color: #F2385A
+}
+
+.button {
+  color: white
+}
+
 #tool {
   width: 100%;
   height: 100%
 }
 
 #title {
+  color: #E9F1DF;
   font-size: 60px;
   padding-bottom: 0px;
+  margin-left: 10px;
   margin-bottom: 0px;
 }
 
@@ -69,4 +108,66 @@ button {
 
 #spelling {
   margin-left: 20px;
+}
+
+#checker {
+  margin-left: 20px;
+}
+
+#tracker {
+
+}
+
+#resources {
+  margin-left: 20px;
+  margin-top: 40px;
+}
+
+#chart {
+  width: 600px;
+  height: 600px;
+}
+
+#myerrors {
+  /*margin-left: 20px;*/
+}
+
+#exercises {
+  /*margin-left: 20px;
+  margin-top: 100px;*/
+}
+
+#login {
+  margin-top: 200px;
+  margin-left: 600px;
+  width: 600px;
+  height: 400px;
+  background-color: #4AD9D9
+}
+
+#loginform {
+  padding-left: 40px
+
+}
+
+#padding {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+#signup {
+  margin-top: 200px;
+  margin-left: 600px;
+  width: 600px;
+  height: 400px;
+  background-color: #4AD9D9
+}
+
+#spacing {
+  height: 40px;
+}
+
+#signupform {
+  padding-left: 40px;
+  padding-top: 40px
 }

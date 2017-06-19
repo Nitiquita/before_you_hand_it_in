@@ -15,3 +15,6 @@ bower_components/
 tmp
 .DS_Store
 .idea
+
+#private keys
+before-you-hand-it-in-firebase-adminsdk-o80i6-836259fc8c.json

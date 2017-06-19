@@ -1,0 +1,23 @@
+<div id="login">
+    <div id="loginform">
+        <div >
+            <h2 id="padding">Login</h2>
+
+        </div>
+        <form class="form-inline">
+
+            <div class="form-group">
+
+                <label class="label-control">Email: </label>
+                <input class="form-control" type="email" ng-model="email" />
+            </div>
+
+            <div class="form-group">
+                <label class="label-control">Password: </label> <input type="password" ng-model="password" class="form-control"
+                />
+            </div>
+
+            <button ng-click="login()" ng-controller="SignUpCtrl" type="submit" class="btn btn-primary">Login</button>
+        </form>
+    </div>
+</div>

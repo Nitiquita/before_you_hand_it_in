@@ -1,37 +1,34 @@
-[
-    {
-        "name": "Rick Sanchez", 
-        "errors": {
-            "spelling": {
-                "words": [],
-                "count": ""
-            }, 
-            "wordChoice": {
-                "count": ""
-            },
-            "verbTense": {
-                "count": ""
-            }, 
-            "verbForm": {
-                "count": ""
-            },
-            "subjectVerb": {
-                "count": ""
-            },
-            "fusedSentence": {
-                "count": ""
-            }, 
-            "commaSplice": {
-                "count": ""
-            }, 
-            "punctuation": {
-                "count": ""
-            }, 
-            "fragment": {
-                "count": ""
-            }
+{
+    "user1": {
+        "firstname": "Rick",
+        "lastname": "Sanchez",
+        "email": "rsanchez@rickandmorty.com",
+        "spelling": {
+            "count": ""
+        },
+        "wordChoice": {
+            "count": ""
+        },
+        "verbTense": {
+            "count": ""
+        },
+        "verbForm": {
+            "count": ""
+        },
+        "subjectVerb": {
+            "count": ""
+        },
+        "fusedSentence": {
+            "count": ""
+        },
+        "commaSplice": {
+            "count": ""
+        },
+        "punctuation": {
+            "count": ""
+        },
+        "fragment": {
+            "count": ""
         }
-
-
-    },
-]
+    }
+}

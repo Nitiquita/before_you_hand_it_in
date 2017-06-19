@@ -1,0 +1,20 @@
+[debug] [2017-06-18T00:41:39.276Z] ----------------------------------------------------------------------
+[debug] [2017-06-18T00:41:39.279Z] Command:      /usr/local/bin/node /usr/local/bin/firebase auth:import users.json --rounds=8 --mem-cost=14
+[debug] [2017-06-18T00:41:39.279Z] CLI Version:  3.9.1
+[debug] [2017-06-18T00:41:39.279Z] Platform:     darwin
+[debug] [2017-06-18T00:41:39.279Z] Node Version: v7.0.0
+[debug] [2017-06-18T00:41:39.282Z] Time:         Sat Jun 17 2017 20:41:39 GMT-0400 (EDT)
+[debug] [2017-06-18T00:41:39.282Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-06-18T00:41:39.311Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase"]
+[debug] [2017-06-18T00:41:39.311Z] > authorizing via signed-in user
+[debug] [2017-06-18T00:41:39.315Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/before-you-hand-it-in  
+ Sat Jun 17 2017 20:41:39 GMT-0400 (EDT)
+[debug] [2017-06-18T00:41:40.299Z] <<< HTTP RESPONSE 200
+[debug] [2017-06-18T00:41:40.301Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/before-you-hand-it-in/tokens  
+ Sat Jun 17 2017 20:41:40 GMT-0400 (EDT)
+[debug] [2017-06-18T00:41:41.106Z] <<< HTTP RESPONSE 200
+[warn] ⚠  No hash algorithm specified. Password users cannot be imported.
+[debug] [2017-06-18T00:41:41.227Z] Error: ENOENT: no such file or directory, stat 'users.json'
+[error] 
+[error] Error: An unexpected error has occurred.

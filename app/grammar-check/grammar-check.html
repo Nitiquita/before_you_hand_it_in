@@ -1,53 +1,93 @@
 <div class='row'>
   <wrap class="col-md-6">
-    <h1>Grammar Checker</h1>
+    <div id='checker'>
+      <h1>Grammar Checker</h1>
 
-    <form name="checkform" action="http://community.languagetool.org" method="post" id="tool">
 
-      <p id="checktextpara">
-        <textarea id="checktext" name="text" style="width: 100%" rows="6">Paste your essay here one paragraph at a time. To track your problem areas log your erros on the right.</textarea>
-      </p>
 
-      <div>
-        <select name="lang" id="lang">
+      <form name="checkform" action="http://community.languagetool.org" method="post">
+
+        <p id="checktextpara">
+          <textarea id="checktext" name="text" style="width: 100%" rows="6">Paste your essay in this box one paragraph at a time. Log your errors to the right, and look at your error statistics on your My Stats page. </textarea>
+        </p>
+
+        <div>
+          <select name="lang" id="lang">
           <option value="en-US">English</option>
           <option value="de-DE">German</option>
           <option value="it">Italian</option>
       </select>
-        <input type="submit" name="_action_checkText" value="Check Text" onClick="doit();return false;">
-        <div id="feedbackErrorMessage" style="color: red;"></div>
-      </div>
+          <input type="submit" name="_action_checkText" value="Check Text" onClick="doit();return false;">
+          <div id="feedbackErrorMessage" style="color: red;"></div>
+        </div>
 
-    </form>
+      </form>
 
-    <a href='www.languagetool.org'>Language Tool</a>
+
+
+      <a href='https://languagetool.org/'>Language Tool</a>
+    </div>
   </wrap>
-  <wrap id='tracker' class="col-md-6">
+  <form id='tracker' class="col-md-6" >
     <h2>Track Errors</h2>
     <ul id='errors'>
+      <wrap class="col-md-6">
+        <li class='log'><button ng-click="count=count+1" ng-init="count=0" type="button" class="btn btn-warning">LOG</button><button class="btn btn-success">Delete</button>Spelling
+          <span class='count' name="spelling">Error Count:{{count}}</span>
+        </li>
 
-      <li class='log'><button ng-click="count=count+1" ng-init="count=0" type="button" class="btn btn-success">LOG</button>Spelling<span class='count'>Error Count: {{count}}</span></li>
+        <li class='log' >Record word:<input type="text" ng-model="text" name="text" id="spelling" /><button ng-click="submit2()" ng-controller="GrammarCheckCtrl" class="btn btn-info" type='submit'>LOG</button></li>
 
-      <li class='log'>Record word:<input type='text' id="spelling"/></li>
+        <li class='log'><button ng-click="count1=count1+1" ng-init="count1=0" type="button" class="btn btn-warning">LOG</button><button class="btn btn-success">Delete</button>Word Choice
+          <span class='count' name = "wc">Error Count: {{count1}}</span> </li>
 
-      <li class='log'><button ng-click="count1=count1+1" ng-init="count1=0" type="button" class="btn btn-success">LOG</button>Word Choice <span class='count'>Error Count: {{count1}}</span> </li>
+        <li class='log'><button ng-click="count2=count2+1" ng-init="count2=0" type="button" class="btn btn-warning">LOG</button><button class="btn btn-success">Delete</button>Verb Tense
+          <span class='count' name="vt">Error Count: {{count2}}</span></li>
 
-      <li class='log'><button ng-click="count2=count2+1" ng-init="count2=0" type="button" class="btn btn-success">LOG</button>Verb Tense <span class='count'>Error Count: {{count2}}</span></li>
+        <li class='log'><button ng-click="count3=count3+1" ng-init="count3=0" type="button" class="btn btn-warning">LOG</button><button class="btn btn-success">Delete</button>Verb Form
+          <span class='count' name="vf">Error Count: {{count3}}</span>
+        </li>
 
-      <li class='log'><button ng-click="count3=count3+1" ng-init="count3=0" type="button" class="btn btn-success">LOG</button>Verb Form<span class='count'>Error Count: {{count3}}</span></li>
+        <li class='log'><button ng-click="count4=count4+1" ng-init="count4=0" type="button" class="btn btn-warning">LOG</button><button class="btn btn-success">Delete</button>Subject Verb
+          Agreement
+          <span class='count' name="sva">Error Count: {{count4}}</span></li>
+      </wrap>
+
+      <wrap class="col-md-6">
+        <li class='log'><button ng-click="count5=count5+1" ng-init="count5=0" type="button" class="btn btn-warning">LOG</button><button class="btn btn-success">Delete</button>Fused Sentence
+          <span class='count' name="fs">Error Count: {{count5}}</span>
+        </li>
+
+        <li class='log'><button ng-click="count6=count6+1" ng-init="count6=0" type="button" class="btn btn-warning">LOG</button><button class="btn btn-success">Delete</button>Comma Splice
+          <span class='count' name="cs">Error Count: {{count6}}</span>
+        </li>
+
+        <li class='log'><button ng-click="count7=count7+1" ng-init="count7=0" type="button" class="btn btn-warning">LOG</button><button class="btn btn-success">Delete</button>Fragment
+          <span class='count' name="frag">Error Count: {{count7}}</span>
+        </li>
+
+        <li class='log'><button ng-click="count8=count8+1" ng-init="count8=0" type="button" class="btn btn-warning">LOG</button><button class="btn btn-success">Delete</button>Passive Voice
+          Construction
+          <span class='count' name="pvc">Error Count: {{count8}}</span></li>
+
+        <li class='log'><button ng-click="count9=count9+1" ng-init="count9=0" type="button" class="btn btn-warning">LOG</button><button class="btn btn-success">Delete</button>Punctuation
+          <span class='count' name="punc">Error Count: {{count9}}</span> </li>
       
-      <li class='log'><button ng-click="count4=count4+1" ng-init="count4=0" type="button" class="btn btn-success">LOG</button>Subject Verb Agreement<span class='count'>Error Count: {{count4}}</span></li>
-      
-      <li class='log'><button ng-click="count5=count5+1" ng-init="count5=0" type="button" class="btn btn-success">LOG</button>Fused Sentence<span class='count'>Error Count: {{count5}}</span></li>
+        <li class='log'><button type='button' class='btn btn-info' type="submit" ng-click="submit1()" ng-controller="GrammarCheckCtrl">SUBMIT</button></li>
 
-      <li class='log'><button ng-click="count6=count6+1" ng-init="count6=0" type="button" class="btn btn-success">LOG</button>Comma Splice<span class='count'>Error Count: {{count6}}</span></li>
- 
-      <li class='log'><button ng-click="count7=count7+1" ng-init="count7=0" type="button" class="btn btn-success">LOG</button>Fragment <span class='count'>Error Count: {{count7}}</span> </li>
+      </wrap>
 
-      <li class='log'><button ng-click="count8=count8+1" ng-init="count8=0" type="button" class="btn btn-success">LOG</button>Passive Voice Construction<span class='count'>Error Count: {{count8}}</span></li>
+  </from>
 
-      <li class='log'><button ng-click="count9=count9+1" ng-init="count9=0" type="button" class="btn btn-success">LOG</button>Punctuation <span class='count'>Error Count: {{count9}}</span> </li>
-  
-  </wrap>
-
+</div>
+<div id="resources">
+  <h2>You keep using that word. I don't think it means what you think it means.</h2>
+  <a class="rlink" href='http://www.dictionary.com'>Dictionary.com</a>
+  <h2>Too many repeating words?</h2>
+  <a class="rlink" href='http://www.thesaurus.com/'>Thesaurus.com</a>
+  <h2>Did you cite it?</h2>
+  <a class="rlink" href='https://owl.english.purdue.edu/owl/resource/747/24/'>Purdue OWL</a>
+  <div>
+    <a class="rlink" href='http://www.citationmachine.net'>Citation Machine</a>
+  </div>
 </div>

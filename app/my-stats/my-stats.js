@@ -34,7 +34,28 @@ angular.module("myStats", ["ui.router", "chart.js"])
     });
   }])
 
-  .controller("DoughnutCtrl", function ($scope) {
+  .controller("DoughnutCtrl", ["$scope", "$firebaseObject", "firebase", function ($scope, $firebaseObject) {
     $scope.labels = ["Spelling", "Word Choice", "Verb Tense", "Verb Form", "Subject Verb Agreement", "Fused Sentence", "Comma Splice", "Fragment", "Punctuation", "Passive Voice Construction"];
-    $scope.data = [4, 3, 2, 5, 6, 7, 5, 6, 7, 14];
-  });
+
+    var ref = firebase.database().ref('user1/spelling/count')
+
+    var value = []
+    ref.once("value", function (snapshot) {
+        var data = snapshot.val();
+        value.push(JSON.parse(JSON.stringify(snapshot.val())))
+      });
+
+    console.log(value)
+
+    var obj = $firebaseObject(ref)
+
+    var user = obj.$loaded().then(function (res) {
+    })
+
+
+
+
+
+
+    $scope.data = [2, 3, 2, 10, 6, 15, 5, 6, 7, 2];
+  }]);

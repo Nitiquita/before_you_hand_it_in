@@ -45,6 +45,7 @@ angular.module('myApp', [
       })
     // .service('data', function ())
   }])
+
   .controller('AppCtrl', ["$scope", "$firebaseObject", "firebase",
     function ($scope, $firebaseObject) {
       var ref = firebase.database().ref();
@@ -72,6 +73,13 @@ angular.module('myApp', [
       // For three-way data bindings, bind it to the scope instead
       obj.$bindTo($scope, "data");
 
+      $scope.logout = function () {
+        firebase.auth().signOut().then(function () {
+          // Sign-out successful.
+        }).catch(function (error) {
+          console.log(error)
+        });
+      }
 
     }
   ])
